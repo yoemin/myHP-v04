@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import ImageGrid from "../../components/mdx/ImageGrid.astro";
+import Base from "../../layouts/Base.astro";
+
+// 1. 'projects' コレクションからデータを取得（日付順に並べ替え）
+const allProjects = (await getCollection('projects')).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+);
+
+// 2. ImageGrid が受け取れる形式 { src, alt, href } にデータを変換
+const projectImages = allProjects.map(project => ({
+  src: project.data.photoImage,
+  alt: project.data.title,
+  href: `/projects/${project.slug}/` // クリックした時の詳細ページへのリンク
+}));
+
+const title = "Projects";
+const description = "My Works";
+---
+
+<Base title={title} description={description}>
+  <section>
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">Projects</h1>
+    
+    {/* 3. 変換したデータを ImageGrid に渡す */}
+    {projectImages.length > 0 ? (
+      <ImageGrid
+        columns={3}
+        images={projectImages}
+      />
+    ) : (
+      <p>作品がまだ登録されていません。</p>
+    )}
+  </section>
+</Base>

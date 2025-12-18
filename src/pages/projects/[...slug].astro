@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Base from "../../layouts/Base.astro"; // レイアウトは適宜合わせてください
+
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('projects');
+  return projectEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Base title={entry.data.title} description={entry.data.summary}>
+  <article class="prose prose-neutral dark:prose-invert">
+    <h1 class="mb-4 text-2xl font-medium tracking-tight">{entry.data.title}</h1>
+    <div class="flex justify-between items-center mt-2 mb-8 text-sm">
+        <p class="text-sm text-neutral-600 dark:text-neutral-400">
+            {entry.data.publishedAt.toDateString()}
+        </p>
+    </div>
+    <img src={entry.data.photoImage} alt={entry.data.title} class="rounded-lg mb-8" />
+    <Content />
+  </article>
+</Base>

@@ -1,0 +1,74 @@
+---
+import ImageGrid from "../../components/mdx/ImageGrid.astro";
+import Base from "../../layouts/Base.astro";
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Image } from "astro:assets"
+
+const title = "Profile";
+const description = "Profile";
+---
+
+<Base title={title} description={description}>
+  <section>
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">Profile</h1>
+ 
+    <a href="" target="_blank">
+      <Image
+        src="/profile.jpg"
+        alt="Profile photo"
+        class="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+        width={160}
+        height={160}
+      />
+    </a>
+
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">
+      OdaLemon - Movie Designer 
+    </h1>
+
+    <div class="prose prose-neutral dark:prose-invert">
+      <p>
+        1990年生まれ。男性。福岡県出身。
+        <br/>
+        実写系CG制作会社を経て、現在は都内のゲーム会社にて自社製品のプロモーション映像などを制作。
+        趣味は読書、カメラ、創作活動。
+        乃木口丸氏とクリエイティブユニット{" "}
+        <a
+          target="_blank"
+          href="https://utworks.org/">
+          UTworks
+        </a>
+        を結成し、いくつか作品を手がけている。
+      </p>
+      <p>
+        I work for a game company in Tokyo as a movie designer producing promotional videos for their products.
+        My hobbies are reading and photography.
+        I am also a member of a creative unit called "UTworks" with Maru Nogiguchi. 
+      </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">
+      MainTools
+    </h1>
+    <div class="prose prose-neutral dark:prose-invert">
+      <p>
+        AfterEffects,CINEMA4D,Photoshop,Illustrator,ClipStudioPaint
+      </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">
+      REEL
+    </h1>
+    <div class="prose prose-neutral dark:prose-invert">
+        - Confidential
+        <!-- <YouTube id="wXhTHyIgQ_U" /> -->
+    </div>
+
+  </section>
+</Base>
