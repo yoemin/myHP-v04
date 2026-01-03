@@ -1,6 +1,6 @@
 ---
 title: "Self-Portrait"
-photoImage: "../public/myself.jpg"
+photoImage: "/myself.jpg"
 publishedAt: 2026-01-03
 summary: "Self-Portrait"
 ---
