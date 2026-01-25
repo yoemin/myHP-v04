@@ -1,6 +1,6 @@
 ---
 title: "noisy"
-photoImage: "https://previews.dropbox.com/p/thumb/AC3-uC4AWehCYN6HIktplQDrJUwLsSdPQ_4jeVMboBjUGHJ4Y6NMu1Tbs4uprxIYrhBLLzriGU_gjXzvkhQCT8_an_nwZViva3DIgUdlbKgHbwl8uEkCiwJPZRtZe4v9Uyjrj2EG6MxbziTvFohL18OqhsG0gQ-RQotbK9A1bxQCbirb6SxQmKDnl34WZd1cD0xG7k7RIx5TAfg7tRaDYufCjJKwUoZ0vt2iRFuLQSfTkgTrSjRXxw-bFVVu4QUbmz1nXRhC36dZz_rTy3nFDLIGozcdGHEnfeNOgziNCyrBbs-INT-mpmojKvTGSzePL41xf_LdSClwIN-NECVYsEGtzkDHmp3BpG8R_GulJcgXDlmkskBH8TW-appb22Ps7YQ/p.png?is_prewarmed=true"
+photoImage: "/noisy.jpg"
 publishedAt: 2016-11-29
 summary: "noisy"
 ---
